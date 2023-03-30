@@ -128,9 +128,9 @@ body {
 
   .portfolio-box,
   .blog-box {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    flex-wrap: wrap; 
+    
   }
 
   .box2,
@@ -266,6 +266,9 @@ body {
   border-radius: 10px;
 }
 
+
+
+
 .service-content h1 {
   color: #007eff;
   font-family: sans-serif;
@@ -285,18 +288,16 @@ body {
   background-color: #14120f;
 }
 
-
 .portfolio-box,
 .blog-box {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
 }
 
 .box2,
 .box3 {
-  width: 400px;
+  width: calc(33.33% - 20px);
   margin: 20px 10px;
   height: 250px;
 }
@@ -309,10 +310,6 @@ body {
   opacity: 0.6;
   border-radius: 10px;
 }
-
-
-
-
 
 .text1,
 .text {
@@ -385,7 +382,147 @@ body {
   margin: auto;
   display: block;
 }
+@media screen and (max-width: 480px) {
+  .box2,
+  .box3 {
+    width: 100%;
+    margin: 20px 0;
+  }
 
+  .box3 img,
+  .box2 img {
+    width: 100%;
+    margin-left: -4rem;
+  
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .box2,
+  .box3 {
+    width: calc(50% - 15px);
+    margin: 20px 7.5px;
+    /* margin-left: -20rem; */
+  }
+
+  .box3 img,
+  .box2 img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box2,
+  .box3 {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+
+
+
+/* .portfolio-box, */
+/* .blog-box { */
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* flex-wrap: wrap; */
+/*  */
+/* } */
+/*  */
+/* .box2, */
+/* .box3 { */
+  /* width: 400px; */
+  /* margin: 20px 10px; */
+  /* height: 250px; */
+/* } */
+/*  */
+/* .box3 img, */
+/* .box2 img { */
+  /* position: absolute; */
+  /* height: 250px; */
+  /* width: 400px; */
+  /* opacity: 0.6; */
+  /* border-radius: 10px; */
+/* } */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* .text1, */
+/* .text { */
+  /* color: white; */
+  /* position: relative; */
+  /* height: 250px; */
+  /* width: 400px; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: end; */
+/* } */
+/*  */
+/* .text p a { */
+  /* font-family: Arial, monospace; */
+  /* font-size: 2rem; */
+  /* margin: 30px 0; */
+  /* color: white; */
+  /* text-decoration: none; */
+/* } */
+/*  */
+/* .text h1 { */
+  /* color: white; */
+  /* border: none; */
+  /* font-size: 20px; */
+  /* font-family: Arial, monospace; */
+  /* font-weight: 300; */
+/* } */
+/*  */
+/* .text1 div { */
+  /* margin: 0 auto; */
+  /* width: 90%; */
+  /* padding: 20px 0; */
+/* } */
+/*  */
+/* .text1 div h1 { */
+  /* font-size: 30px; */
+  /* color: #007eff; */
+  /* text-align: left; */
+/* } */
+/*  */
+/* .text1 div button { */
+  /* width: 50%; */
+  /* padding: 15px 5px; */
+  /* border-radius: 10px; */
+  /* background-color: #14120f; */
+  /* border: none; */
+  /* color: white; */
+  /* cursor: pointer; */
+  /* font-size: 17px; */
+  /* margin: auto; */
+  /* display: block; */
+/* } */
+/*  */
+/* .text { */
+  /* text-align: center; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+/* } */
+/*  */
+/* .showMoreBtn { */
+  /* width: 10%; */
+  /* padding: 25px 5px; */
+  /* border-radius: 10px; */
+  /* background-color: #14120f; */
+  /* border: none; */
+  /* color: white; */
+  /* cursor: pointer; */
+  /* font-size: 15px; */
+  /* margin: auto; */
+  /* display: block; */
+/* } */
+/*  */
 @media(max-width:320px) {
   .showMoreBtn {
     width: 65%;
@@ -648,9 +785,18 @@ footer {
 body {
   overflow-x: hidden;
 }
+#i{
+  display: none;
+}
 
 @media (max-width: 786px) {
-
+#i{
+  display: block;
+  margin-left: 20rem;
+}
+.can{
+  margin-left: 20rem;
+}
   .head .logo {
     color: #fff;
   }
@@ -700,7 +846,7 @@ body {
 
 
   #cancel {
-    margin-left: 16rem;
+    margin-left: 20rem;
     cursor: pointer;
     font-size: 3rem;
   }
@@ -710,14 +856,15 @@ body {
     cursor: pointer;
     font-size: 2.6rem;
     height: 40%;
+    /* display: none; */
   }
 
-  /* #cancel:hover {
+ #cancel:hover {
     color: deepskyblue;
     animation: rotate;
     animation-duration: 2s;
     animation-direction: normal;
-  } */
+  } 
 
   @keyframes rotate {
     0% {
